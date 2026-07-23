@@ -1,0 +1,7 @@
+@theme inline {
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  --duration-micro: 150ms;
+  --duration-standard: 300ms;
+  --duration-layout: 450ms;
+}

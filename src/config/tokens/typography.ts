@@ -1,0 +1,80 @@
+export const typographyTokens = {
+  families: {
+    display: '"Playfair Display", Georgia, serif',
+    interface: '"Inter", "Roboto", sans-serif',
+  },
+  scale: {
+    displayHero: {
+      fontSize: "3rem",
+      lineHeight: "1.15",
+      letterSpacing: "-0.02em",
+      fontWeight: 600,
+    },
+    h1: {
+      fontSize: "2.25rem",
+      lineHeight: "1.20",
+      letterSpacing: "-0.01em",
+      fontWeight: 500,
+    },
+    h2: {
+      fontSize: "1.5rem",
+      lineHeight: "1.30",
+      letterSpacing: "0",
+      fontWeight: 400,
+    },
+    h3: {
+      fontSize: "1.25rem",
+      lineHeight: "1.40",
+      letterSpacing: "0.01em",
+      fontWeight: 500,
+    },
+    body: {
+      fontSize: "1rem",
+      lineHeight: "1.60",
+      letterSpacing: "0",
+      fontWeight: 400,
+    },
+    bodySmall: {
+      fontSize: "0.875rem",
+      lineHeight: "1.50",
+      letterSpacing: "0.01em",
+      fontWeight: 400,
+    },
+    labelMeta: {
+      fontSize: "0.75rem",
+      lineHeight: "1.40",
+      letterSpacing: "0.05em",
+      fontWeight: 500,
+    },
+    actionButton: {
+      fontSize: "0.875rem",
+      lineHeight: "1.20",
+      letterSpacing: "0.03em",
+      fontWeight: 600,
+    },
+  },
+  weights: {
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+  },
+  letterSpacing: {
+    displayHero: "-0.02em",
+    h1: "-0.01em",
+    none: "0",
+    h3: "0.01em",
+    bodySmall: "0.01em",
+    action: "0.03em",
+    label: "0.05em",
+  },
+  lineHeights: {
+    displayHero: "1.15",
+    h1: "1.20",
+    h2: "1.30",
+    h3: "1.40",
+    body: "1.60",
+    bodySmall: "1.50",
+    label: "1.40",
+    action: "1.20",
+  },
+} as const;

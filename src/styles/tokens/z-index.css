@@ -1,0 +1,8 @@
+@theme inline {
+  --z-sticky-header: 100;
+  --z-dropdown-menu: 200;
+  --z-overlay-scrim: 300;
+  --z-drawer-slide: 400;
+  --z-modal-popup: 500;
+  --z-toast-alert: 600;
+}

@@ -1,0 +1,7 @@
+@theme inline {
+  --radius-flat: 0px;
+  --radius-accent: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 9999px;
+}

@@ -1,0 +1,43 @@
+@theme inline {
+  --color-storefront-background-light: #fcfbf9;
+  --color-storefront-background-dark: #111111;
+  --color-storefront-text-light: #1a1a1a;
+  --color-storefront-text-dark: #f3f4f6;
+
+  --color-admin-background-light: #f8f9fa;
+  --color-admin-background-dark: #0b0b0c;
+
+  --color-brand-cream: var(--color-storefront-background-light);
+  --color-brand-obsidian: var(--color-storefront-background-dark);
+  --color-brand-charcoal: var(--color-storefront-text-light);
+  --color-brand-off-white: var(--color-storefront-text-dark);
+  --color-brand-gold-polished: #d4af37;
+  --color-brand-gold-muted: #c5a059;
+  --color-brand-champagne: #e6d5b8;
+
+  --color-admin-light: var(--color-admin-background-light);
+  --color-admin-dark: var(--color-admin-background-dark);
+
+  --color-neutral-text-primary: #1a1a1a;
+  --color-neutral-text-secondary: #6b7280;
+  --color-neutral-border-light: #e5e7eb;
+  --color-neutral-border-gold-tint: #e6d5b8;
+  --color-neutral-border-dark: #222222;
+  --color-neutral-surface-light: #ffffff;
+  --color-neutral-surface-dark: #1c1c1c;
+
+  --color-semantic-success: #10b981;
+  --color-semantic-warning: #f59e0b;
+  --color-semantic-error: #ef4444;
+  --color-semantic-info: #3b82f6;
+
+  --color-background: var(--color-brand-obsidian);
+  --color-foreground: var(--color-brand-off-white);
+  --color-surface: var(--color-neutral-surface-dark);
+  --color-border: var(--color-neutral-border-dark);
+  --color-muted: #9ca3af;
+  --color-accent: var(--color-brand-gold-polished);
+  --color-accent-secondary: var(--color-brand-gold-muted);
+  --color-accent-subtle: rgba(212, 175, 55, 0.12);
+  --color-focus-ring: var(--color-brand-gold-polished);
+}

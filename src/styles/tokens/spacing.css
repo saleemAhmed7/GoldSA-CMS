@@ -1,0 +1,19 @@
+@theme inline {
+  --spacing-layout-1: 4px;
+  --spacing-layout-2: 8px;
+  --spacing-layout-3: 12px;
+  --spacing-layout-4: 16px;
+  --spacing-layout-6: 24px;
+  --spacing-layout-8: 32px;
+  --spacing-layout-12: 48px;
+  --spacing-layout-16: 64px;
+
+  --spacing-space-1: var(--spacing-layout-1);
+  --spacing-space-2: var(--spacing-layout-2);
+  --spacing-space-3: var(--spacing-layout-3);
+  --spacing-space-4: var(--spacing-layout-4);
+  --spacing-space-6: var(--spacing-layout-6);
+  --spacing-space-8: var(--spacing-layout-8);
+  --spacing-space-12: var(--spacing-layout-12);
+  --spacing-space-16: var(--spacing-layout-16);
+}
