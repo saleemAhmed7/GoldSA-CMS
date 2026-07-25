@@ -1,5 +1,5 @@
 import { DashboardView } from "@/features/dashboard/components/dashboard-view";
 
-export default function AdminRootPage() {
+export default function AdminDashboardPage() {
   return <DashboardView />;
 }

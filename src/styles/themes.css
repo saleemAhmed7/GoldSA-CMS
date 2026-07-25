@@ -1,51 +1,51 @@
 :root,
 html,
-html.dark {
-  color-scheme: dark;
-  --color-background: var(--color-brand-obsidian);
-  --color-foreground: var(--color-brand-off-white);
-  --color-surface: var(--color-neutral-surface-dark);
-  --color-border: var(--color-neutral-border-dark);
-  --color-muted: #9ca3af;
-  --color-accent: var(--color-brand-gold-polished);
-  --color-accent-secondary: var(--color-brand-gold-muted);
-  --color-accent-subtle: rgba(212, 175, 55, 0.12);
-  --color-success: var(--color-semantic-success);
-  --color-warning: var(--color-semantic-warning);
-  --color-error: var(--color-semantic-error);
-  --color-info: var(--color-semantic-info);
-  --color-focus-ring: var(--color-brand-gold-polished);
-  --color-selection-bg: rgba(212, 175, 55, 0.22);
-  --color-selection-text: var(--color-brand-off-white);
-  --glass-bg: rgba(17, 17, 17, 0.8);
-  --glass-border: rgba(212, 175, 55, 0.15);
-  --glass-blur: 12px;
-  --shimmer-base: #1c1c1c;
-  --shimmer-highlight: #2a2a2a;
-  --color-admin-background: var(--color-admin-dark);
-}
-
 html.light {
   color-scheme: light;
-  --color-background: var(--color-brand-cream);
-  --color-foreground: var(--color-brand-charcoal);
-  --color-surface: var(--color-neutral-surface-light);
-  --color-border: var(--color-neutral-border-light);
-  --color-muted: var(--color-neutral-text-secondary);
-  --color-accent: var(--color-brand-gold-muted);
-  --color-accent-secondary: var(--color-brand-gold-polished);
-  --color-accent-subtle: rgba(197, 160, 89, 0.1);
-  --color-success: var(--color-semantic-success);
-  --color-warning: var(--color-semantic-warning);
-  --color-error: var(--color-semantic-error);
-  --color-info: var(--color-semantic-info);
-  --color-focus-ring: var(--color-brand-gold-polished);
-  --color-selection-bg: rgba(197, 160, 89, 0.2);
-  --color-selection-text: var(--color-brand-charcoal);
-  --glass-bg: rgba(252, 251, 249, 0.8);
-  --glass-border: rgba(197, 160, 89, 0.2);
-  --glass-blur: 12px;
-  --shimmer-base: #f0ede8;
-  --shimmer-highlight: #e8e4de;
-  --color-admin-background: var(--color-admin-light);
+  --color-background: #fcfbf9; /* Warm Cream / Ivory */
+  --color-foreground: #1a1a1a; /* Deep Charcoal */
+  --color-surface: #ffffff;    /* Solid White Card Surface */
+  --color-border: #e8e4de;     /* Fine Soft Warm Border */
+  --color-muted: #6b7280;      /* Muted Slate */
+  --color-accent: #d4af37;     /* Polished Gold Accent */
+  --color-accent-secondary: #c5a059; /* Satin Muted Gold */
+  --color-accent-subtle: rgba(212, 175, 55, 0.1); /* Champagne Glow */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  --color-focus-ring: #d4af37;
+  --color-selection-bg: rgba(212, 175, 55, 0.18);
+  --color-selection-text: #1a1a1a;
+  --glass-bg: rgba(252, 251, 249, 0.85);
+  --glass-border: rgba(197, 160, 89, 0.25);
+  --glass-blur: 16px;
+  --shimmer-base: #f3f0ea;
+  --shimmer-highlight: #eae6de;
+  --color-admin-background: #f8f9fa;
+}
+
+html.dark {
+  color-scheme: dark;
+  --color-background: #111111; /* Obsidian Black */
+  --color-foreground: #f3f4f6; /* Off-White Text */
+  --color-surface: #1c1c1c;    /* Slate Card Surface */
+  --color-border: #2c2c2c;     /* Muted Dark Border */
+  --color-muted: #9ca3af;
+  --color-accent: #d4af37;
+  --color-accent-secondary: #c5a059;
+  --color-accent-subtle: rgba(212, 175, 55, 0.15);
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+  --color-focus-ring: #d4af37;
+  --color-selection-bg: rgba(212, 175, 55, 0.25);
+  --color-selection-text: #f3f4f6;
+  --glass-bg: rgba(17, 17, 17, 0.85);
+  --glass-border: rgba(212, 175, 55, 0.2);
+  --glass-blur: 16px;
+  --shimmer-base: #1c1c1c;
+  --shimmer-highlight: #2a2a2a;
+  --color-admin-background: #0b0b0c;
 }

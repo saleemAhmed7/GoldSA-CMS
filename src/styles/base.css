@@ -20,6 +20,7 @@ body {
   font-size: var(--text-body-default);
   font-weight: var(--font-weight-regular);
   line-height: var(--leading-body);
+  font-variant-numeric: tabular-nums lining-nums;
   text-rendering: optimizeLegibility;
   transition:
     background-color var(--duration-standard) var(--ease-out-quart),
@@ -33,6 +34,7 @@ h2,
 h3 {
   margin: 0;
   font-family: var(--font-display);
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 h1 {
@@ -63,6 +65,11 @@ h6 {
   font-family: var(--font-interface);
   font-weight: var(--font-weight-medium);
   line-height: var(--leading-header-3);
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+p, span, div, table, td, th {
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 p {
@@ -84,6 +91,7 @@ input,
 select,
 textarea {
   font: inherit;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 img,

@@ -20,7 +20,7 @@
 
   --color-neutral-text-primary: #1a1a1a;
   --color-neutral-text-secondary: #6b7280;
-  --color-neutral-border-light: #e5e7eb;
+  --color-neutral-border-light: #e8e4de;
   --color-neutral-border-gold-tint: #e6d5b8;
   --color-neutral-border-dark: #222222;
   --color-neutral-surface-light: #ffffff;
@@ -31,13 +31,13 @@
   --color-semantic-error: #ef4444;
   --color-semantic-info: #3b82f6;
 
-  --color-background: var(--color-brand-obsidian);
-  --color-foreground: var(--color-brand-off-white);
-  --color-surface: var(--color-neutral-surface-dark);
-  --color-border: var(--color-neutral-border-dark);
-  --color-muted: #9ca3af;
+  --color-background: var(--color-brand-cream);
+  --color-foreground: var(--color-brand-charcoal);
+  --color-surface: var(--color-neutral-surface-light);
+  --color-border: var(--color-neutral-border-light);
+  --color-muted: var(--color-neutral-text-secondary);
   --color-accent: var(--color-brand-gold-polished);
   --color-accent-secondary: var(--color-brand-gold-muted);
-  --color-accent-subtle: rgba(212, 175, 55, 0.12);
+  --color-accent-subtle: rgba(212, 175, 55, 0.1);
   --color-focus-ring: var(--color-brand-gold-polished);
 }

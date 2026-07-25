@@ -80,13 +80,15 @@ export function AppShell({ children, variant = "storefront" }: AppShellProps) {
 
       <div
         className={cn(
-          "min-h-dvh transition-[padding] duration-standard ease-out-quart lg:pl-[calc(var(--spacing-layout-16)*4+var(--spacing-layout-1))]",
-          sidebarCollapsed && "lg:pl-layout-16",
+          "min-h-dvh transition-[padding] duration-standard ease-out-quart lg:ps-[calc(var(--spacing-layout-16)*4+var(--spacing-layout-1))]",
+          sidebarCollapsed && "lg:ps-layout-16",
         )}
       >
         <TopHeader
           breadcrumbs={defaultBreadcrumbItems}
+          onToggleSidebar={() => setSidebarCollapsed((current) => !current)}
           onOpenMobileSidebar={() => setMobileSidebarOpen(true)}
+          sidebarCollapsed={sidebarCollapsed}
         />
         <MainContentContainer>{children}</MainContentContainer>
       </div>

@@ -1,6 +1,8 @@
+"use client";
+
 import { Button, Card, Typography } from "@/components/ui";
 import { LogoArea } from "@/components/layout/logo-area";
-import { shellNavigationItems } from "@/components/layout/shell-data";
+import { useLanguage } from "@/components/providers/language-provider";
 import { cn } from "@/lib/cn";
 
 interface PremiumSidebarProps {
@@ -14,7 +16,7 @@ interface PremiumSidebarProps {
 
 const expandedWidthClass = "w-[calc(var(--spacing-layout-16)*4+var(--spacing-layout-1))]";
 const sidebarSurfaceStyles =
-  "flex h-dvh flex-col border-r border-border bg-surface text-foreground shadow-low transition-all duration-standard ease-out-quart";
+  "flex h-dvh flex-col border-r rtl:border-l rtl:border-r-0 border-border bg-surface text-foreground shadow-low transition-all duration-standard ease-out-quart";
 
 export function PremiumSidebar({
   collapsed,
@@ -24,8 +26,16 @@ export function PremiumSidebar({
   id,
   mode = "desktop",
 }: PremiumSidebarProps) {
+  const { t, dir } = useLanguage();
   const isMobile = mode === "mobile";
   const isCollapsed = isMobile ? false : collapsed;
+
+  const navItems = [
+    { key: "dashboard", label: t("dashboard"), description: t("workspace") },
+    { key: "catalog", label: t("catalog"), description: "22K, 24K, 18K" },
+    { key: "media", label: t("media"), description: "GIA, Assets" },
+    { key: "settings", label: t("settings"), description: "General, Rates" },
+  ] as const;
 
   return (
     <aside
@@ -34,9 +44,9 @@ export function PremiumSidebar({
         sidebarSurfaceStyles,
         isCollapsed ? "w-layout-16" : expandedWidthClass,
         isMobile &&
-          "fixed inset-y-0 left-0 z-drawer-slide max-w-[calc(100dvw-var(--spacing-layout-8))] shadow-overlay",
-        isMobile && (mobileOpen ? "translate-x-0" : "-translate-x-full"),
-        !isMobile && "hidden lg:flex",
+          "fixed inset-y-0 left-0 rtl:left-auto rtl:right-0 z-drawer-slide max-w-[calc(100dvw-var(--spacing-layout-8))] shadow-overlay",
+        isMobile && (mobileOpen ? "translate-x-0" : dir === "rtl" ? "translate-x-full" : "-translate-x-full"),
+        !isMobile && "fixed inset-y-0 left-0 rtl:left-auto rtl:right-0 z-sticky-header hidden lg:flex",
       )}
       aria-label={isMobile ? "Mobile application navigation" : "Application navigation"}
     >
@@ -60,19 +70,19 @@ export function PremiumSidebar({
             tone="muted"
             className="px-layout-3 pb-layout-2 pt-layout-1"
           >
-            Workspace
+            {t("workspace")}
           </Typography>
         ) : null}
 
-        {shellNavigationItems.map((item, index) => {
+        {navItems.map((item, index) => {
           const isActive = index === 0;
 
           return (
-            <div key={item.label} className="relative">
+            <div key={item.key} className="relative">
               {isActive ? (
                 <span
                   aria-hidden="true"
-                  className="absolute inset-y-layout-2 left-0 w-[var(--radius-accent)] rounded-full bg-brand-gold-polished"
+                  className="absolute inset-y-layout-2 left-0 rtl:left-auto rtl:right-0 w-[var(--radius-accent)] rounded-full bg-brand-gold-polished"
                 />
               ) : null}
               <Button
@@ -83,7 +93,7 @@ export function PremiumSidebar({
                 className={cn(
                   "w-full justify-start border-transparent text-muted hover:text-brand-gold-polished",
                   isActive && "text-brand-gold-polished shadow-flat",
-                  isCollapsed ? "justify-center px-layout-2" : "pl-layout-4 pr-layout-3",
+                  isCollapsed ? "justify-center px-layout-2" : "pl-layout-4 pr-layout-3 rtl:pl-layout-3 rtl:pr-layout-4",
                 )}
                 aria-label={isCollapsed ? `${item.label}, ${item.description}` : undefined}
               >
@@ -97,7 +107,7 @@ export function PremiumSidebar({
                   <span className="size-layout-1 rounded-full bg-current" />
                 </span>
                 {!isCollapsed ? (
-                  <span className="min-w-0 text-left">
+                  <span className="min-w-0 text-left rtl:text-right">
                     <Typography
                       as="span"
                       variant="bodySmall"

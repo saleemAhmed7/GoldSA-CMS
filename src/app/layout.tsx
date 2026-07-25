@@ -27,7 +27,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="ar" dir="rtl" className="light" suppressHydrationWarning>
       <body>
         <AppProviders>{children}</AppProviders>
       </body>
