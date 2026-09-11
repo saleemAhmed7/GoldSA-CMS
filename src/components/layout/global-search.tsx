@@ -1,3 +1,6 @@
+"use client";
+
+import { useLanguage } from "@/components/providers/language-provider";
 import { Input, Label } from "@/components/ui";
 
 interface GlobalSearchProps {
@@ -5,10 +8,12 @@ interface GlobalSearchProps {
 }
 
 export function GlobalSearch({ className }: GlobalSearchProps) {
+  const { t } = useLanguage();
+
   return (
     <div className={className}>
       <Label htmlFor="global-shell-search" className="sr-only">
-        Global search
+        {t("searchWorkspace")}
       </Label>
       <Input
         id="global-shell-search"
@@ -16,8 +21,8 @@ export function GlobalSearch({ className }: GlobalSearchProps) {
         size="md"
         type="search"
         className="border-border bg-surface/80 shadow-flat"
-        placeholder="Search the workspace"
-        aria-label="Global search placeholder"
+        placeholder={t("searchWorkspace")}
+        aria-label={t("searchWorkspace")}
         readOnly
       />
     </div>

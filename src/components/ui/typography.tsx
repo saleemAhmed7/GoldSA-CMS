@@ -32,14 +32,14 @@ const typographyElementByVariant: Record<TypographyVariant, ElementType> = {
 };
 
 const typographyVariantStyles: Record<TypographyVariant, string> = {
-  displayHero: "font-display text-display-hero",
-  h1: "font-display text-header-1",
-  h2: "font-display text-header-2",
-  h3: "font-display text-header-3",
-  body: "font-interface text-body-default",
-  bodySmall: "font-interface text-body-small",
-  labelMeta: "font-interface text-label-meta uppercase",
-  action: "font-interface text-action-button",
+  displayHero: "font-display text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-tight",
+  h1: "font-display text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight leading-tight",
+  h2: "font-display text-lg sm:text-xl lg:text-2xl font-normal leading-snug",
+  h3: "font-display text-base sm:text-lg lg:text-xl font-medium leading-snug",
+  body: "font-interface text-sm sm:text-base leading-relaxed",
+  bodySmall: "font-interface text-xs sm:text-sm leading-normal",
+  labelMeta: "font-interface text-[11px] sm:text-xs uppercase tracking-wider font-medium",
+  action: "font-interface text-xs sm:text-sm font-semibold tracking-wide",
 };
 
 const typographyToneStyles: Record<TypographyTone, string> = {

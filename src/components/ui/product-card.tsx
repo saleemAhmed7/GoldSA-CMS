@@ -27,7 +27,7 @@ export function PriceDisplay({
   const formattedCompare = compareAtPrice ? formatPrice(compareAtPrice) : null;
 
   return (
-    <div className="inline-flex items-baseline gap-2 font-display tabular-nums">
+    <span className="inline-flex items-baseline gap-2 font-display tabular-nums">
       <span
         className={cn(
           "font-semibold text-brand-gold-polished",
@@ -44,7 +44,7 @@ export function PriceDisplay({
           {formattedCompare}
         </span>
       )}
-    </div>
+    </span>
   );
 }
 

@@ -24,7 +24,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const baseButtonStyles =
-  "inline-flex shrink-0 items-center justify-center rounded-sm border font-semibold tracking-action transition-all duration-standard ease-out-quart focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 aria-pressed:border-brand-gold-polished aria-pressed:bg-accent-subtle";
+  "inline-flex shrink-0 items-center justify-center rounded-sm border font-semibold tracking-action whitespace-nowrap transition-all duration-standard ease-out-quart focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-40 aria-pressed:border-brand-gold-polished aria-pressed:bg-accent-subtle";
 
 const buttonVariantStyles: Record<ButtonVariant, string> = {
   primary:

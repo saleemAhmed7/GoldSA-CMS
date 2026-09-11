@@ -1,6 +1,7 @@
 // Existing primitives
 export { Button } from "./button";
 export type { ButtonProps, ButtonSize, ButtonVariant } from "./button";
+export { PlusIcon } from "./plus-icon";
 
 export { Card } from "./card";
 export type { CardProps, CardSize, CardVariant } from "./card";

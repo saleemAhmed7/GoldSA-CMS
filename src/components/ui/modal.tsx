@@ -89,6 +89,7 @@ export interface DialogProps {
   confirmLabel?: string;
   cancelLabel?: string;
   isDestructive?: boolean;
+  isLoading?: boolean;
 }
 
 export function Dialog({
@@ -100,6 +101,7 @@ export function Dialog({
   confirmLabel = "Confirm",
   cancelLabel = "Cancel",
   isDestructive = false,
+  isLoading = false,
 }: DialogProps) {
   return (
     <Modal
@@ -109,23 +111,22 @@ export function Dialog({
       size="sm"
       footer={
         <>
-          <Button variant="outline" size="sm" onClick={onClose}>
+          <Button variant="outline" size="sm" onClick={onClose} disabled={isLoading}>
             {cancelLabel}
           </Button>
           <Button
             variant={isDestructive ? "danger" : "primary"}
             size="sm"
-            onClick={() => {
-              onConfirm();
-              onClose();
-            }}
+            isLoading={isLoading}
+            disabled={isLoading}
+            onClick={onConfirm}
           >
             {confirmLabel}
           </Button>
         </>
       }
     >
-      <p className="text-body-default text-muted">{description}</p>
+      <div className="text-body-default text-muted">{description}</div>
     </Modal>
   );
 }

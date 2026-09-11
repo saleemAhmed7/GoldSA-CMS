@@ -1,131 +1,18 @@
+import { commonTranslations } from "./i18n/locales/common";
+import { productTranslations } from "./i18n/locales/products";
+
 export type Language = "ar" | "tr" | "en";
 
-export interface TranslationDictionary {
-  // Navigation & Shell
-  workspace: string;
-  operationsControlRoom: string;
-  adminSubtitle: string;
-  dashboard: string;
-  catalog: string;
-  media: string;
-  settings: string;
-  live: string;
-  liveGoldMarketRates: string;
-  perGram: string;
-  gold24k: string;
-  gold22k: string;
-  gold18k: string;
-
-  // Time Ranges
-  today: string;
-  days7: string;
-  days30: string;
-  ytd: string;
-
-  // Actions
-  refreshRates: string;
-  quickActions: string;
-  quickActionsDesc: string;
-  addNewJewelry: string;
-  updateGoldRates: string;
-  fulfillOrders: string;
-  uploadCertificate: string;
-  exportReport: string;
-
-  // KPIs
-  totalSalesRevenue: string;
-  vsPreviousMonth: string;
-  activeOpenOrders: string;
-  inFulfillmentQueue: string;
-  pendingPaymentVerification: string;
-  catalogInventory: string;
-  activeJewelryItems: string;
-  goldWeightSummary: string;
-  lowStockAlerts: string;
-  itemsNeedReorder: string;
-
-  // Charts
-  salesRevenueTrend: string;
-  monthlyRevenueBreakdown: string;
-  revenueByKrat: string;
-  goldPuritySales: string;
-  customOrders: string;
-  standardCatalog: string;
-  peak: string;
-  bangleInsight: string;
-
-  // Summaries
-  fulfillmentLifecycle: string;
-  orderProgression: string;
-  inventoryHealth: string;
-  stockLevelsAndWarnings: string;
-  actionItems: string;
-
-  // Orders Table
-  recentOrders: string;
-  recentOrdersDesc: string;
-  orderId: string;
-  customer: string;
-  jewelryItems: string;
-  totalAmount: string;
-  orderStatus: string;
-  paymentStatus: string;
-  date: string;
-  action: string;
-  viewDetails: string;
-  generateInvoice: string;
-  updateStatus: string;
-
-  // Top Products
-  topPerformingJewelry: string;
-  topPerformingDesc: string;
-  sold: string;
-  outOfStock: string;
-
-  // Timeline
-  recentActivityLedger: string;
-  auditTrailDesc: string;
-
-  // Dev preview
-  statePreview: string;
-  testConditions: string;
-  normalView: string;
-  loadingSkeleton: string;
-  emptyState: string;
-  noDataTitle: string;
-  noDataDesc: string;
-  returnToNormal: string;
-}
-
-export const translations: Record<Language, TranslationDictionary> = {
+export const translations = {
   ar: {
-    workspace: "مساحة عمل الإدارة",
-    operationsControlRoom: "غرفة التحكم والعمليات",
-    adminSubtitle: "إدارة مباشرة لإكتفاء المجوهرات، أسعار الذهب، وطلبات العملاء.",
-    dashboard: "لوحة التحكم",
-    catalog: "الكتالوج والمجوهرات",
-    media: "مكتبة الوسائط",
-    settings: "الإعدادات العامة",
-    live: "مباشر",
+    ...commonTranslations.ar,
+    ...productTranslations.ar,
+
     liveGoldMarketRates: "أسعار الذهب المباشرة (ريال / جرام)",
     perGram: "جرام",
     gold24k: "ذهب عيار 24",
     gold22k: "ذهب عيار 22",
     gold18k: "ذهب عيار 18",
-
-    today: "اليوم",
-    days7: "7 أيام",
-    days30: "30 يوماً",
-    ytd: "منذ بداية العام",
-
-    refreshRates: "تحديث الأسعار",
-    quickActions: "إجراءات سريعة للمشغل",
-    quickActionsDesc: "مهام الإدارة الأكثر استخداماً",
-    addNewJewelry: "+ إضافة قطعة مجوهرات",
-    updateGoldRates: "تحديث أسعار الذهب",
-    fulfillOrders: "معالجة الطلبات المعلقة",
-    uploadCertificate: "رفع شهادة GIA",
-    exportReport: "تصدير التقرير",
 
     totalSalesRevenue: "إجمالي إيرادات المبيعات",
     vsPreviousMonth: "مقارنة بالشهر السابق",
@@ -161,17 +48,19 @@ export const translations: Record<Language, TranslationDictionary> = {
     totalAmount: "المبلغ الإجمالي",
     orderStatus: "حالة الطلب",
     paymentStatus: "حالة الدفع",
-    date: "التاريخ",
-    action: "الإجراء",
-    viewDetails: "عرض التفاصيل",
+
+    updateGoldRates: "تحديث أسعار الذهب",
+    fulfillOrders: "معالجة الطلبات المعلقة",
+    uploadCertificate: "رفع شهادة GIA",
+    exportReport: "تصدير التقرير",
+    addNewJewelry: "إضافة قطعة مجوهرات",
+
     generateInvoice: "إصدار الفاتورة",
     updateStatus: "تحديث الحالة",
-
     topPerformingJewelry: "المجوهرات الأكثر مبيعاً",
     topPerformingDesc: "قطع المجوهرات الأعلى تحقيقاً للإيراد هذا الشهر",
     sold: "تم بيعها",
     outOfStock: "نفذت الكمية",
-
     recentActivityLedger: "سجل العمليات الأخير",
     auditTrailDesc: "مسار التتبع للعمليات والتغييرات في النظام",
 
@@ -185,33 +74,14 @@ export const translations: Record<Language, TranslationDictionary> = {
     returnToNormal: "العودة للعرض الرئيسي",
   },
   tr: {
-    workspace: "Yönetici Çalışma Alanı",
-    operationsControlRoom: "Operasyon Kontrol Merkezi",
-    adminSubtitle: "Canlı mücevher envanteri, altın gram fiyatları ve sipariş takibi.",
-    dashboard: "Kontrol Paneli",
-    catalog: "Mücevher Kataloğu",
-    media: "Medya Kütüphanesi",
-    settings: "Genel Ayarlar",
-    live: "Canlı",
+    ...commonTranslations.tr,
+    ...productTranslations.tr,
+
     liveGoldMarketRates: "Canlı Altın Piyasa Fiyatları (TL / Gram)",
     perGram: "gram",
     gold24k: "24 Ayar Altın",
     gold22k: "22 Ayar Altın",
     gold18k: "18 Ayar Altın",
-
-    today: "Bugün",
-    days7: "7 Gün",
-    days30: "30 Gün",
-    ytd: "Yıl Başı",
-
-    refreshRates: "Fiyatları Yenile",
-    quickActions: "Hızlı Operatör Eylemleri",
-    quickActionsDesc: "En sık kullanılan yönetim görevleri",
-    addNewJewelry: "+ Yeni Mücevher Ekle",
-    updateGoldRates: "Altın Fiyatlarını Güncelle",
-    fulfillOrders: "Bekleyen Siparişleri İşle",
-    uploadCertificate: "GIA Sertifikası Yükle",
-    exportReport: "Raporu Dışa Aktar",
 
     totalSalesRevenue: "Toplam Satış Geliri",
     vsPreviousMonth: "geçen aya göre",
@@ -247,17 +117,19 @@ export const translations: Record<Language, TranslationDictionary> = {
     totalAmount: "Toplam Tutar",
     orderStatus: "Sipariş Durumu",
     paymentStatus: "Ödeme Durumu",
-    date: "Tarih",
-    action: "İşlem",
-    viewDetails: "Detayları Gör",
+
+    updateGoldRates: "Altın Fiyatlarını Güncelle",
+    fulfillOrders: "Bekleyen Siparişleri İşle",
+    uploadCertificate: "GIA Sertifikası Yükle",
+    exportReport: "Raporu Dışa Aktar",
+    addNewJewelry: "Yeni Mücevher Ekle",
+
     generateInvoice: "Fatura Oluştur",
     updateStatus: "Durumu Güncelle",
-
     topPerformingJewelry: "En Çok Satan Mücevherler",
     topPerformingDesc: "Bu ay en yüksek ciro yapan mücevher modelleri",
     sold: "adet satıldı",
     outOfStock: "Stok Tükendi",
-
     recentActivityLedger: "Son İşlem Kayıtları",
     auditTrailDesc: "Sistem güncellemeleri ve güvenlik izleme kaydı",
 
@@ -271,33 +143,14 @@ export const translations: Record<Language, TranslationDictionary> = {
     returnToNormal: "Ana Görünüme Dön",
   },
   en: {
-    workspace: "Admin Workspace",
-    operationsControlRoom: "Operations Control Room",
-    adminSubtitle: "Real-time jewelry inventory management, gold spot rates, and sales performance.",
-    dashboard: "Dashboard",
-    catalog: "Jewelry Catalog",
-    media: "Media Library",
-    settings: "General Settings",
-    live: "Live",
+    ...commonTranslations.en,
+    ...productTranslations.en,
+
     liveGoldMarketRates: "Live Gold Market Base Rates (Per Gram)",
     perGram: "gram",
     gold24k: "24K Gold",
     gold22k: "22K Gold",
     gold18k: "18K Gold",
-
-    today: "Today",
-    days7: "7 Days",
-    days30: "30 Days",
-    ytd: "YTD",
-
-    refreshRates: "Refresh Rates",
-    quickActions: "Quick Operator Actions",
-    quickActionsDesc: "Frequently used management tasks",
-    addNewJewelry: "+ Add New Jewelry Item",
-    updateGoldRates: "Update Gold Rates",
-    fulfillOrders: "Fulfill Pending Orders",
-    uploadCertificate: "Upload Certificate",
-    exportReport: "Export Sales Report",
 
     totalSalesRevenue: "Total Sales Revenue",
     vsPreviousMonth: "vs. previous month",
@@ -333,17 +186,19 @@ export const translations: Record<Language, TranslationDictionary> = {
     totalAmount: "Total Amount",
     orderStatus: "Order Status",
     paymentStatus: "Payment",
-    date: "Date",
-    action: "Action",
-    viewDetails: "View Details",
+
+    updateGoldRates: "Update Gold Rates",
+    fulfillOrders: "Fulfill Pending Orders",
+    uploadCertificate: "Upload Certificate",
+    exportReport: "Export Sales Report",
+    addNewJewelry: "Add New Jewelry Item",
+
     generateInvoice: "Generate Invoice",
     updateStatus: "Update Status",
-
     topPerformingJewelry: "Top Performing Jewelry",
     topPerformingDesc: "Highest revenue generating items this month",
     sold: "sold",
     outOfStock: "Out of Stock",
-
     recentActivityLedger: "Recent Activity Ledger",
     auditTrailDesc: "Audit trail of system changes and high-value actions",
 
@@ -357,3 +212,5 @@ export const translations: Record<Language, TranslationDictionary> = {
     returnToNormal: "Return to Normal Dashboard",
   },
 };
+
+export type TranslationDictionary = typeof translations.ar;

@@ -1,3 +1,6 @@
+"use client";
+
+import { useLanguage } from "@/components/providers/language-provider";
 import { Button, Card, Typography } from "@/components/ui";
 
 interface UserMenuPlaceholderProps {
@@ -5,6 +8,8 @@ interface UserMenuPlaceholderProps {
 }
 
 export function UserMenuPlaceholder({ className }: UserMenuPlaceholderProps) {
+  const { t } = useLanguage();
+
   return (
     <Button
       type="button"
@@ -12,7 +17,7 @@ export function UserMenuPlaceholder({ className }: UserMenuPlaceholderProps) {
       size="md"
       className={className}
       aria-haspopup="menu"
-      aria-label="User menu placeholder"
+      aria-label={t("administrator")}
     >
       <span className="flex items-center gap-layout-3">
         <Card
@@ -24,12 +29,12 @@ export function UserMenuPlaceholder({ className }: UserMenuPlaceholderProps) {
             GS
           </Typography>
         </Card>
-        <span className="hidden min-w-0 text-left sm:block">
-          <Typography as="span" variant="bodySmall" className="block truncate">
-            User Menu
+        <span className="hidden min-w-0 text-left rtl:text-right sm:block">
+          <Typography as="span" variant="bodySmall" className="block truncate font-medium">
+            {t("administrator")}
           </Typography>
-          <Typography as="span" variant="labelMeta" tone="accent" className="block truncate">
-            Placeholder
+          <Typography as="span" variant="labelMeta" tone="accent" className="block truncate text-[10px]">
+            {t("superAdmin")}
           </Typography>
         </span>
       </span>

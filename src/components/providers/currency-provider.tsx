@@ -81,15 +81,14 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
   function formatPrice(amountInTRY: number): string {
     const converted = convertPrice(amountInTRY);
     try {
-      const formatter = new Intl.NumberFormat(activeConfig.locale, {
-        style: "currency",
-        currency: activeConfig.code,
+      const formatter = new Intl.NumberFormat("en-US", {
         maximumFractionDigits: 2,
         minimumFractionDigits: 0,
+        useGrouping: false,
       });
-      return formatter.format(converted);
+      return `${activeConfig.code} ${formatter.format(converted)}`;
     } catch {
-      return `${converted.toLocaleString()} ${activeConfig.symbol}`;
+      return `${activeConfig.code} ${converted.toFixed(2)}`;
     }
   }
 
@@ -107,7 +106,7 @@ export function useCurrency() {
     return {
       currency: "TRY" as Currency,
       setCurrency: () => {},
-      formatPrice: (amount: number) => `${amount.toLocaleString()} ₺`,
+      formatPrice: (amount: number) => `TRY ${amount.toLocaleString("en-US", { useGrouping: false })}`,
       convertPrice: (amount: number) => amount,
       activeConfig: fallbackConfig,
     };

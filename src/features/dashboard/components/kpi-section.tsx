@@ -22,19 +22,23 @@ export function KpiSection() {
         </div>
         <div>
           <PriceDisplay price={totalRevenueTRY} size="lg" className="tabular-nums" />
-          <Typography variant="bodySmall" tone="muted" className="mt-1 tabular-nums">
+          <Typography as="span" variant="bodySmall" tone="muted" className="block mt-1 tabular-nums">
             {t("vsPreviousMonth")}: <PriceDisplay price={prevRevenueTRY} size="sm" className="text-muted line-through font-normal inline tabular-nums" />
           </Typography>
         </div>
       </Card>
 
       {/* 2. Active Open Orders */}
-      <Card variant="elevated" size="md" className="flex flex-col justify-between gap-3 h-full border-border hover:border-brand-gold-polished/40 transition-all shadow-flat hover:shadow-medium">
-        <div className="flex items-center justify-between">
-          <Typography variant="labelMeta" tone="muted">
-            {t("activeOpenOrders")}
-          </Typography>
-          <StatusIndicator status="info" pulse />
+      <Card variant="elevated" size="md" className="relative overflow-hidden flex flex-col justify-between gap-3 h-full border-border hover:border-brand-gold-polished/40 transition-all shadow-flat hover:shadow-medium">
+        <div className="flex items-start justify-between gap-3">
+          <div className="relative flex min-h-6 items-center pl-6">
+            <span className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 z-0">
+              <StatusIndicator status="info" pulse className="shrink-0" />
+            </span>
+            <Typography variant="labelMeta" tone="muted" className="leading-5">
+              {t("activeOpenOrders")}
+            </Typography>
+          </div>
         </div>
         <div>
           <div className="flex items-baseline gap-2 tabular-nums">
@@ -71,12 +75,16 @@ export function KpiSection() {
       </Card>
 
       {/* 4. Low Stock Alerts */}
-      <Card variant="elevated" size="md" className="flex flex-col justify-between gap-3 h-full border-semantic-warning/30 bg-semantic-warning/5 hover:border-semantic-warning transition-all shadow-flat hover:shadow-medium">
-        <div className="flex items-center justify-between">
-          <Typography variant="labelMeta" tone="warning">
-            {t("lowStockAlerts")}
-          </Typography>
-          <StatusIndicator status="warning" pulse />
+      <Card variant="elevated" size="md" className="relative overflow-hidden flex flex-col justify-between gap-3 h-full border-semantic-warning/30 bg-semantic-warning/5 hover:border-semantic-warning transition-all shadow-flat hover:shadow-medium">
+        <div className="flex items-start justify-between gap-3">
+          <div className="relative flex min-h-6 items-center pl-6">
+            <span className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 z-0">
+              <StatusIndicator status="warning" pulse className="shrink-0" />
+            </span>
+            <Typography variant="labelMeta" tone="warning" className="leading-5">
+              {t("lowStockAlerts")}
+            </Typography>
+          </div>
         </div>
         <div>
           <div className="flex items-baseline gap-2 tabular-nums">

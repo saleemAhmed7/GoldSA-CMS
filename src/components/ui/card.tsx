@@ -62,6 +62,7 @@ export function Card({
         cardBaseStyles,
         cardVariantStyles[variant],
         cardSizeStyles[size],
+        "overflow-hidden",
         isSelected && "border-brand-gold-polished bg-accent-subtle",
         isDisabled && "pointer-events-none cursor-not-allowed opacity-40",
         className,

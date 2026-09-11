@@ -5,7 +5,6 @@ import { MainContentContainer } from "@/components/layout/main-content-container
 import { PremiumSidebar } from "@/components/layout/premium-sidebar";
 import { defaultBreadcrumbItems } from "@/components/layout/shell-data";
 import { TopHeader } from "@/components/layout/top-header";
-import { Button } from "@/components/ui";
 import { cn } from "@/lib/cn";
 
 type AppShellVariant = "storefront" | "admin";
@@ -55,28 +54,12 @@ export function AppShell({ children, variant = "storefront" }: AppShellProps) {
       </a>
 
       <PremiumSidebar
+        id="application-sidebar"
         collapsed={sidebarCollapsed}
-        onToggleCollapsed={() => setSidebarCollapsed((current) => !current)}
-      />
-
-      <PremiumSidebar
-        id="mobile-application-sidebar"
-        mode="mobile"
-        collapsed={false}
         mobileOpen={mobileSidebarOpen}
+        onToggleCollapsed={() => setSidebarCollapsed((current) => !current)}
         onCloseMobile={() => setMobileSidebarOpen(false)}
       />
-
-      {mobileSidebarOpen ? (
-        <Button
-          type="button"
-          variant="ghost"
-          size="md"
-          className="fixed inset-0 z-overlay-scrim h-auto w-auto rounded-flat bg-background/80 p-0 backdrop-blur-sm lg:hidden"
-          aria-label="Close navigation overlay"
-          onClick={() => setMobileSidebarOpen(false)}
-        />
-      ) : null}
 
       <div
         className={cn(

@@ -124,8 +124,8 @@ export function StatusIndicator({
   className,
 }: StatusIndicatorProps) {
   return (
-    <div className={cn("inline-flex items-center gap-2", className)}>
-      <span className="relative flex size-2.5">
+    <div className={cn("relative z-0 inline-flex items-center gap-2", className)}>
+      <span className="relative z-0 flex size-2.5 shrink-0">
         {pulse && (
           <span
             className={cn(

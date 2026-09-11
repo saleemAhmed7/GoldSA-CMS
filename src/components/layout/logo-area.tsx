@@ -25,7 +25,7 @@ export function LogoArea({ collapsed = false }: LogoAreaProps) {
       <div
         className={cn(
           "min-w-0 transition-opacity duration-standard ease-out-quart",
-          collapsed && "pointer-events-none opacity-0",
+          collapsed && "lg:pointer-events-none lg:opacity-0",
         )}
       >
         <Typography variant="h3" className="truncate">

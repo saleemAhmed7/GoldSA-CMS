@@ -1,7 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/components/providers/language-provider";
-import { Button, Card, Typography } from "@/components/ui";
+import { Button, Card, PlusIcon, Typography } from "@/components/ui";
 
 export function QuickActionsBar() {
   const { t } = useLanguage();
@@ -18,19 +18,19 @@ export function QuickActionsBar() {
       </div>
 
       <div className="flex flex-wrap items-center gap-3">
-        <Button variant="primary" size="sm">
+        <Button variant="primary" size="md" leadingIcon={<PlusIcon />}>
           {t("addNewJewelry")}
         </Button>
-        <Button variant="secondary" size="sm">
+        <Button variant="secondary" size="md">
           {t("updateGoldRates")}
         </Button>
-        <Button variant="outline" size="sm">
+        <Button variant="outline" size="md">
           {t("fulfillOrders")}
         </Button>
-        <Button variant="outline" size="sm">
+        <Button variant="outline" size="md">
           {t("uploadCertificate")}
         </Button>
-        <Button variant="ghost" size="sm">
+        <Button variant="outline" size="md">
           {t("exportReport")}
         </Button>
       </div>
